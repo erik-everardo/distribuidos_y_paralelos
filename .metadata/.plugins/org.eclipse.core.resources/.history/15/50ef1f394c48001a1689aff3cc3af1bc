@@ -1,0 +1,21 @@
+package factorial;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class program {
+	public static void main (String[] args) {
+		Scanner escaner = new Scanner(System.in);
+		System.out.print("Factorial de: ");
+		System.out.println(factorial(escaner.nextLong()));
+	}
+	
+	public static BigInteger factorial(long n) {
+		BigInteger res = BigInteger.valueOf(n);
+		
+		for (long i=n; i>=1; i--) {
+			res = res.multiply(res.subtract(BigInteger.valueOf(1)));
+		}
+		return res;
+	}
+}
