@@ -13,10 +13,13 @@ public class program {
 	public static BigInteger factorial(long n) {
 		BigInteger res = BigInteger.valueOf(1);
 		
+		long inicio = System.currentTimeMillis();
 		for (long i=1; i<=n; i++) {
 			res = res.multiply(BigInteger.valueOf(i));
 			//System.out.println(res);
 		}
-		return res;
+		long fin = System.currentTimeMillis();
+		System.out.println("Tiempo de ejecución: " + (fin-inicio) + " ms");
+		return BigInteger.valueOf(0);
 	}
 }
